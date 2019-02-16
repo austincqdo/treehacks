@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title> Our Website </title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<header>
+	<h1> Our Website </h1>
+</header>
+<body>
+	<div class="search-container">
+		<input type="text" placeholder="Enter location...">
+	</div>
+	<div class="topic-container">
+		<select>
+			<option value="" selected disabled hidden>Issue</option>
+			<option value="abortion">Abortion</option>
+			<option value="civil-rights">Civil Rights</option>
+			<option value="crime">Crime</option>
+			<option value="drugs">Drugs</option>
+			<option value="education">Education</option>
+			<option value="environment">Environment</option>
+			<option value="foreign-policy">Foreign Policy</option>
+			<option value="gun-control">Gun Control</option>
+			<option value="health-care">Health Care</option>
+			<option value="immigration">Immigration</option>
+		</select>
+		<a href="{{ url_for('result') }}"><button type="submit">Submit</button></a>
+	</div>
+</body>

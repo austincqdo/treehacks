@@ -11,7 +11,10 @@ def index():
 @app.route('/result', methods=['GET', 'POST'])
 def result():
 	if request.method == 'POST':
-		select = request.form.get('issues')
+		select_iss = request.form.get('issues')
+		print(select_iss)
+		select_loc = request.form.get('location')
+		print(select_loc)
 	return render_template('result.html')
 
 if __name__ == "__main__":

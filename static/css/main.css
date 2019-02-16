@@ -1,7 +1,7 @@
 header, body{
-    background-color: #16243a;
+    background-color: #8c1515;
     overflow: hidden;
-		color: #e8e8e8;
+		color: #d2c295;
 		font-family: 'Muli', sans-serif;
 		text-align:center;
 }
@@ -11,4 +11,9 @@ h1 {
 	font-size: 40px;
 	margin: 10px;
 	margin-top: 100px;
+}
+
+.mainimage {
+	position: relative;
+	top: 5px;
 }

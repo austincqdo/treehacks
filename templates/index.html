@@ -4,35 +4,39 @@
 	<title> Our Website </title>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
 	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<link rel='shortcut icon' type='image/x-icon' href='/static/favicon.ico' />
 </head>
 <header>
 	<h1> Our Website </h1>
 </header>
 <body>
-	<img src="/static/sabo.png" alt="sabo">
+	<img class="mainimage" src="/static/sabo.png" alt="sabo">
 	</br> </br> </br> </br> </br>
-	<div class="search-container">
-		<input type="text" placeholder="Enter location..." style="width: 400px; height: 20px">
-	</div>
-	</br>
-	<form name="startpage" method="POST" action="{{ url_for("result") }}">
-	<div class="topic-container">
-		<select name = "issues" id = "issues" style="width: 125px; height: 20px">
-			<option value="" selected disabled hidden>Issue</option>
-			<option value="abortion">Abortion</option>
-			<option value="civil-rights">Civil Rights</option>
-			<option value="crime">Crime</option>
-			<option value="drugs">Drugs</option>
-			<option value="education">Education</option>
-			<option value="environment">Environment</option>
-			<option value="foreign-policy">Foreign Policy</option>
-			<option value="gun-control">Gun Control</option>
-			<option value="health-care">Health Care</option>
-			<option value="immigration">Immigration</option>
-		</select>
-		<a href="{{ url_for('result') }}"><button type="submit">Submit</button></a>
-	</div>
+	<form name="info" id="info" method="POST" action="{{ url_for("result") }}">
+	<!-- <div class="search-container"> -->
+	<input type="text" name="location" id="location" placeholder="Enter location..." style="width: 400px; height: 20px">
+	<!-- </div> -->
+	<!-- </form> -->
 	</form>
+	</br>
+	<!-- <form name="issues" method="POST" action="{{ url_for("result") }}"> -->
+	<!-- <div class="topic-container"> -->
+	<select name = "issues" id = "issues" form="info" style="width: 125px; height: 20px">
+		<option value="" selected disabled hidden>Issue</option>
+		<option value="Abortion">Abortion</option>
+		<option value="Civil_Rights">Civil Rights</option>
+		<option value="Crime">Crime</option>
+		<option value="Drugs">Drugs</option>
+		<option value="Education">Education</option>
+		<option value="Environment">Environment</option>
+		<option value="Foreign_Policy">Foreign Policy</option>
+		<option value="Gun_Control">Gun Control</option>
+		<option value="Health-Care">Health Care</option>
+		<option value="Immigration">Immigration</option>
+	</select>
+	<a href="{{ url_for('result') }}"><button type="submit" form="info">Submit</button></a>
+	<!-- </div> -->
+	<!-- </form> -->
 	</br> </br> </br> 
 	<font size="2">What do your elected officials think about X?</font>
 </body>

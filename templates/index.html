@@ -9,11 +9,15 @@
 	<h1> Our Website </h1>
 </header>
 <body>
+	<img src="/static/sabo.png" alt="sabo">
+	</br> </br> </br> </br> </br>
 	<div class="search-container">
-		<input type="text" placeholder="Enter location...">
+		<input type="text" placeholder="Enter location..." style="width: 400px; height: 20px">
 	</div>
+	</br>
+	<form name="startpage" method="POST" action="{{ url_for("result") }}">
 	<div class="topic-container">
-		<select>
+		<select name = "issues" id = "issues" style="width: 125px; height: 20px">
 			<option value="" selected disabled hidden>Issue</option>
 			<option value="abortion">Abortion</option>
 			<option value="civil-rights">Civil Rights</option>
@@ -28,4 +32,7 @@
 		</select>
 		<a href="{{ url_for('result') }}"><button type="submit">Submit</button></a>
 	</div>
+	</form>
+	</br> </br> </br> 
+	<font size="2">What do your elected officials think about X?</font>
 </body>

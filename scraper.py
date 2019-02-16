@@ -3,8 +3,8 @@ import requests
 import sys
 
 #page_link = "http://www.ontheissues.org/CA/Dana_Rohrabacher_Abortion.htm"
-def get_votes():
-	page_link = "http://www.ontheissues.org/CA/" + sys.argv[1] + "_" + sys.argv[2] + "_" + sys.argv[3] + ".htm"
+def get_votes(first, last, issue):
+	page_link = "http://www.ontheissues.org/CA/" + first + "_" + last + "_" + issue + ".htm"
 	page_response = requests.get(page_link, timeout=5)
 	page_content = BeautifulSoup(page_response.content, "html.parser")
 	page_string_list = page_content.get_text().split()

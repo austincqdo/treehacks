@@ -19,9 +19,6 @@ def get_votes(first, last, issue):
 				i += 1
 			voted += page_string_list[i]
 			voted_list.append(voted)
-	for statement in voted_list:
-		print(statement + "\n")
+	return voted_list
 
 
-if __name__ == '__main__':
-  get_votes()

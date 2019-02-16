@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from scraper import get_votes
+from project import output_data
 app = Flask(__name__)
 
 ## Make API calls in this file. Use name of elected official as first two parameters for get_votes().
@@ -15,7 +16,12 @@ def result():
 		print(select_iss)
 		select_loc = request.form.get('location')
 		print(select_loc)
-	return render_template('result.html')
+		double_dict = output_data(select_loc)
+		for candidate in double_dict:
+			double_dict[candidate]['votes'] = get_votes(double_dict[candidate]['First Name'], \
+			double_dict[candidate]['Last Name'], select_iss)
+	return render_template('result.html', first=double_dict['Candidate0'], second=double_dict['Candidate1'], \
+	third=double_dict['Candidate5'])
 
 if __name__ == "__main__":
 	app.run(debug=True)

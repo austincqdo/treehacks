@@ -22,7 +22,7 @@ def output_data(location):
             address += input_words[i] + "+"
 
 #450+Serra+Mall,+Stanford,+CA+94305
-    response = requests.get("https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators?address=" + address + "&level=STATE_EXEC", headers=headers)
+    response = requests.get("https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators?address=" + address + "", headers=headers)
     #response = requests.get("https://q4ktfaysw3.execute-api.us-east-1.amazonaws.com/treehacks/legislators?address=450+Serra+Mall,+Stanford,+CA+94305&level=NATIONAL_UPPER", headers=headers)
 
     # Print the status code of the response.

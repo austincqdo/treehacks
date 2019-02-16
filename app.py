@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from scraper import get_votes
 app = Flask(__name__)
 
-## Make API calls in this file. Use name of elected official as first two parameters for get_votes(). 
+## Make API calls in this file. Use name of elected official as first two parameters for get_votes().
 ## 'select' is the third param.
 @app.route('/')
 def index():

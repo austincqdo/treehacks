@@ -37,7 +37,7 @@ def output_data(location):
         data[key].update({"First Name" : items["first_name"]})
         data[key].update({"Last Name" : items["last_name"]})
         data[key].update({"Party" : items["party"]})
-        print(items["emails"])
+        #print(items["emails"])
         if not items["emails"]: #if empty
             data[key].update({"Emails" : "None"})
 

@@ -11,11 +11,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <header>
-	<div id="over" style="position:absolute; width:100%; height:100%">
-		<img src="/static/stanford.png" alt="Stanford" class ="mapimage">
+	<div class="mapimage">
+		<img src="/static/stanford.png" alt="Stanford" class ="mapimage" style="display: block; margin-left: auto; margin-right: auto;"/>
 	</div>
 </header>
-<body>
+<body bgcolor="black">
 	<div class="accordion" id="accordionExample">
 	  <div class="card">
 	    <div class="card-header" id="headingOne">
@@ -25,8 +25,7 @@
 	        </button>
 	      </h5>
 	    </div>
-
-	    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
 	      <div class="card-body">
 					<p> <strong>Affiliation:</strong> {{first["Party"]}} </p>
 					<p> <strong>Bio:</strong> {{first["Bio"]}} </p>
@@ -47,30 +46,30 @@
 	    <div class="card-header" id="headingTwo">
 	      <h5 class="mb-0">
 	        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-	          {{ second["First Name"] }} {{ second["Last Name"] }} ({{ second["Office"] }}) 
+	          {{second["First Name"]}} {{second["Last Name"]}} ( {{second["Office"]}})
 	        </button>
 	      </h5>
 	    </div>
 	    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 	      <div class="card-body">
-	        		<p> <strong>Affiliation:</strong> {{second["Party"]}} </p>
-					<p> <strong>Bio:</strong> {{second["Bio"]}} </p>
-					<p> <strong>Voting Record:</strong> 
-						<ul>
-						{% for thing in second["votes"] %}
-						<li>{{thing}}</li>
-						{% endfor %}  
-						</ul> 
-					</p>
-					<p> <strong>Top Donors:</strong> 
-						<ul>
-						{% for thing in second["donations"] %}
-						<li>{{thing}}</li>
-						{% endfor %}  
-						</ul> 
-					</p>
-					<p> <strong>Twitter:</strong> @{{second["Twitter"]}} </p>
-					<p> <strong>Phone #:</strong> {{third["Phone #"]}} </p>
+	        	<p> <strong>Affiliation:</strong> {{second["Party"]}} </p>
+				<p> <strong>Bio:</strong> {{second["Bio"]}} </p>
+				<p> <strong>Voting Record:</strong> 
+					<ul>
+					{% for thing in second["votes"] %}
+					<li>{{thing}}</li>
+					{% endfor %}  
+					</ul> 
+				</p>
+				<p> <strong>Top Donors:</strong> 
+					<ul>
+					{% for thing in second["donations"] %}
+					<li>{{thing}}</li>
+					{% endfor %}  
+					</ul> 
+				</p>
+				<p> <strong>Twitter:</strong> @{{second["Twitter"]}} </p>
+				<p> <strong>Phone #:</strong> {{third["Phone #"]}} </p>
 	      </div>
 	    </div>
 	  </div>
@@ -78,7 +77,7 @@
 	    <div class="card-header" id="headingThree">
 	      <h5 class="mb-0">
 	        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-	          {{ third["First Name"] }} {{ third["Last Name"] }} ({{ third["Office"] }}) 
+	          {{third["First Name"]}} {{third["Last Name"]}} ( {{third["Office"]}})
 	        </button>
 	      </h5>
 	    </div>

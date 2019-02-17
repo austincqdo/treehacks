@@ -25,18 +25,16 @@ h1 {
 
 .mapimage {
   /* position: relative; */
-  top: 5px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 870px;
+  height: 667px;
+  background-image: url(img/stanford.png);
+  background-size: contain;
+  background-repeat: no-repeat;
   /* width: 50%; */
 }
 
-#over {
-	margin-left: auto;
-	margin-right: auto;
+img{
 	display: block;
-  padding-top: 50px;
-  padding-right: 30px;
-  padding-bottom: 50px;
-  padding-left: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
